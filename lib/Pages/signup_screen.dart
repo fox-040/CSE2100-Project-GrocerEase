@@ -32,9 +32,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
           height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
               gradient: LinearGradient(colors: [
-            hexStringToColor("E78F08"),
-            hexStringToColor("e8fbe0"),
-            hexStringToColor("E78F08")
+            hexStringToColor("#2596be"),
+            hexStringToColor("#eeeee4"),
+            //hexStringToColor("E78F08")
           ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
           child: Padding(
             padding: EdgeInsets.fromLTRB(20, 120, 20, 0),
@@ -48,8 +48,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 const SizedBox(
                   height: 20,
                 ),
-                reusableTextField("Enter Email ID", Icons.person_outline, false,
-                    passwordTextController),
+                reusableTextField("Enter Email ID", Icons.email_outlined, false,
+                    emailTextController),
                 SizedBox(
                   height: 20,
                 ),
