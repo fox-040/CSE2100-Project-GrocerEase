@@ -37,9 +37,9 @@ class _LoginPageState extends State<LoginPage> {
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
             gradient: LinearGradient(colors: [
-          hexStringToColor("a6c4ff"),
-          hexStringToColor("008744"),
-          hexStringToColor("a6c4ff"),
+          hexStringToColor("#2596be"),
+          hexStringToColor("#eeeee4"),
+          //hexStringToColor("a6c4ff"),
         ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
         child: SingleChildScrollView(
             child: Padding(
@@ -51,7 +51,7 @@ class _LoginPageState extends State<LoginPage> {
               Text(
                 "Welcome to Grocer Ease!",
                 style: const TextStyle(
-                  fontSize: 32,
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -85,6 +85,8 @@ class _LoginPageState extends State<LoginPage> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text("Dont have  account?", style: TextStyle(color: Colors.white70)),
+        const Text("Don't have an account?",
+            style: TextStyle(color: Colors.black)),
         GestureDetector(
           onTap: () {
             Navigator.push(context,
@@ -92,7 +94,7 @@ class _LoginPageState extends State<LoginPage> {
           },
           child: const Text(
             "Sign Up",
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
           ),
         )
       ],

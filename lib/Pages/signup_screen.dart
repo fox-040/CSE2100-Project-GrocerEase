@@ -33,76 +33,67 @@ class SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        title: const Text(
-          "SignUp",
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-        ),
-      ),
-      body: Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        decoration: BoxDecoration(
-            gradient: LinearGradient(colors: [
-          hexStringToColor("E78F08"),
-          hexStringToColor("e8fbe0"),
-          hexStringToColor("E78F08")
-        ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
-        child: Padding(
-          padding: EdgeInsets.fromLTRB(20, 120, 20, 0),
-          child: Column(
-            children: <Widget>[
-              const SizedBox(
-                height: 20,
-              ),
-              reusableTextField("Enter Username", Icons.person_outline, false,
-                  userNameTextController),
-              const SizedBox(
-                height: 20,
-              ),
-              reusableTextField("Enter Email ID", Icons.person_outline, false,
-                  emailTextController),
-              SizedBox(
-                height: 20,
-              ),
-              reusableTextField("Enter Password", Icons.lock_outline, true,
-                  passwordTextController),
-              SizedBox(
-                height: 20,
-              ),
-              logInsignUpButton(context, false, () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomePage()));
-              })
-            ],
+        extendBodyBehindAppBar: true,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          title: const Text(
+            "SignUp",
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
         ),
-      ),
-    );
+        body: Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          decoration: BoxDecoration(
+              gradient: LinearGradient(colors: [
+            hexStringToColor("E78F08"),
+            hexStringToColor("e8fbe0"),
+            hexStringToColor("E78F08")
+          ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(20, 120, 20, 0),
+            child: Column(
+              children: <Widget>[
+                const SizedBox(
+                  height: 20,
+                ),
+                reusableTextField("Enter Username", Icons.person_outline, false,
+                    userNameTextController),
+                const SizedBox(
+                  height: 20,
+                ),
+                reusableTextField("Enter Email ID", Icons.person_outline, false,
+                    emailTextController),
+                SizedBox(
+                  height: 20,
+                ),
+                reusableTextField("Enter Password", Icons.lock_outline, true,
+                    passwordTextController),
+                SizedBox(
+                  height: 20,
+                ),
+                logInsignUpButton(context, false, () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomePage()));
+                })
+              ],
+            ),
+          ),
+        ));
   }
 
-  void _signUp() async {
-    setState(() {
-      isSigningUp = true;
-    });
-
-    String username = userNameTextController.text;
+  void _signup() async {
     String email = emailTextController.text;
     String password = passwordTextController.text;
 
     User? user = await _auth.signUpWithEmailAndPassword(email, password);
 
-    setState(() {
-      isSigningUp = false;
-    });
     if (user != null) {
-      showToast(message: "User is successfully created");
+      showToast(message: "User is successfully signed in");
       Navigator.pushNamed(context, "/home");
     } else {
-      showToast(message: "Some error happend");
+      showToast(message: "some error occured");
     }
   }
 }
