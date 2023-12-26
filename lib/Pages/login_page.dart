@@ -1,11 +1,20 @@
 // ignore: file_names
 //import 'dart:html';
 
+//import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Pages/home_page.dart';
 import 'package:flutter_application_1/Pages/signup_screen.dart';
 import 'package:flutter_application_1/color_utilis.dart';
+import 'package:flutter_application_1/firebase_auth_implementair.dart';
 import 'package:flutter_application_1/reusable_widget/reusable.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter_application_1/toast.dart';
+
+bool _isSigning = true;
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -15,6 +24,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final FirebaseAuthService _auth = FirebaseAuthService();
   String name = " ";
   TextEditingController passwordTextController = TextEditingController();
   TextEditingController emailTextController = TextEditingController();
@@ -74,8 +84,7 @@ class _LoginPageState extends State<LoginPage> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text("Dont have  account?",
-            style: TextStyle(color: Colors.white70)),
+        Text("Dont have  account?", style: TextStyle(color: Colors.white70)),
         GestureDetector(
           onTap: () {
             Navigator.push(context,
@@ -88,5 +97,19 @@ class _LoginPageState extends State<LoginPage> {
         )
       ],
     );
+  }
+
+  void _signIn() async {
+    String email = emailTextController.text;
+    String password = passwordTextController.text;
+
+    User? user = await _auth.signInWithEmailAndPassword(email, password);
+
+    if (user != null) {
+      showToast(message: "User is successfully signed in");
+      Navigator.pushNamed(context, "/home");
+    } else {
+      showToast(message: "some error occured");
+    }
   }
 }
