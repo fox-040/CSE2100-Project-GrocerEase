@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Center(
       child: ElevatedButton(
-        child: Text("Logout"),
+        child: Text("Back"),
         onPressed: () {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => LoginPage()));
