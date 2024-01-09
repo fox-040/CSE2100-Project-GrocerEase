@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// ignore: depend_on_referenced_packages
+//ignore: depend_on_referenced_packages
 import 'package:fluttertoast/fluttertoast.dart';
 
 void showToast({required String message}) {
