@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Pages/catalog_page1.dart';
+import 'package:flutter_application_1/Pages/catalog_page1_2.dart';
 import 'package:flutter_application_1/Pages/home_page.dart';
 
 import 'package:firebase_core/firebase_core.dart';
@@ -30,7 +31,7 @@ void main() async {
       ),
       routes: {
         "/": (context) => const SplashScreen(),
-        //'/': (context) => const Catalog(),
+        //'/': (context) => const ProductListScreen(),
         "/home": (context) => const HomePage(),
       },
     ),
