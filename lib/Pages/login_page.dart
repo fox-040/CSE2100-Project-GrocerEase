@@ -58,7 +58,7 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(
                 height: 30,
               ),
-              reusableTextField("Enter Username", Icons.person_outline, false,
+              reusableTextField("Enter Email", Icons.person_outline, false,
                   emailTextController),
               SizedBox(
                 height: 30,
@@ -69,8 +69,8 @@ class _LoginPageState extends State<LoginPage> {
                 height: 20,
               ),
               logInsignUpButton(context, true, () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomePage()));
+                //Navigator.push(context,
+                //MaterialPageRoute(builder: (context) => HomePage()));
               }),
               signUpOption()
             ],

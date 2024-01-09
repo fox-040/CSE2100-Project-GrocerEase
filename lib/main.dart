@@ -20,6 +20,7 @@ void main() async {
         )
       : await Firebase.initializeApp();
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     themeMode: ThemeMode.light,
     theme: ThemeData(primarySwatch: Colors.blueGrey),
     darkTheme: ThemeData(
