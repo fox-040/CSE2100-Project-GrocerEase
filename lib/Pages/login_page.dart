@@ -69,6 +69,7 @@ class _LoginPageState extends State<LoginPage> {
                 height: 20,
               ),
               logInsignUpButton(context, true, () {
+                _signIn();
                 //Navigator.push(context,
                 //MaterialPageRoute(builder: (context) => HomePage()));
               }),
