@@ -31,8 +31,8 @@ void main() async {
       ),
       routes: {
         "/": (context) => const SplashScreen(),
-        //'/': (context) => const ProductListScreen(),
-        "/home": (context) => const HomePage(),
+        // '/': (context) => const ProductListScreen(),
+        "/home": (context) => const ProductListScreen(),
       },
     ),
   );

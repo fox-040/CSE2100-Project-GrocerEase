@@ -43,7 +43,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
     'https://www.shutterstock.com/image-photo/bunch-bananas-isolated-on-white-background-1722111529',
     'https://www.shutterstock.com/image-photo/cherry-isolated-cherries-leaves-on-white-2141795027',
     'https://www.shutterstock.com/image-photo/peach-isolate-slice-leaf-on-white-1550458292',
-    //'https://www.shutterstock.com/image-photo/wicker-basket-different-fruits-on-white-1922825435',
+    'https://www.shutterstock.com/image-photo/wicker-basket-different-fruits-on-white-1922825435',
   ];
 
   @override
@@ -64,8 +64,8 @@ class _ProductListScreenState extends State<ProductListScreen> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Image(
-                                  height: 100,
-                                  width: 100,
+                                  height: 7,
+                                  width: 7,
                                   image: NetworkImage(
                                       productImage[index].toString()),
                                 ),

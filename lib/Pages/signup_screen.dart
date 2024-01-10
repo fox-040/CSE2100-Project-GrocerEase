@@ -58,11 +58,6 @@ class SignUpScreenState extends State<SignUpScreen> {
                 const SizedBox(
                   height: 20,
                 ),
-                /*reusableTextField("Enter user", Icons.person_outline, false,
-                    userNameTextController),
-                const SizedBox(
-                  height: 20,
-                ),*/
                 reusableTextField("Enter Email", Icons.person_outline, false,
                     emailTextController),
                 SizedBox(
@@ -74,8 +69,6 @@ class SignUpScreenState extends State<SignUpScreen> {
                   height: 20,
                 ),
                 logInsignUpButton(context, false, () {
-                  //Navigator.push(context,
-                  // MaterialPageRoute(builder: (context) => HomePage()));
                   _signup();
                 })
               ],
@@ -87,7 +80,6 @@ class SignUpScreenState extends State<SignUpScreen> {
   void _signup() async {
     String email = emailTextController.text;
     String password = passwordTextController.text;
-    String userName = userNameTextController.text;
 
     User? user = await _auth.signUpWithEmailAndPassword(email, password);
 
