@@ -4,12 +4,12 @@
 //import 'dart:js';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Pages/home_page.dart';
+//import 'package:flutter_application_1/Pages/home_page.dart';
 import 'package:flutter_application_1/Pages/signup_screen.dart';
 import 'package:flutter_application_1/color_utilis.dart';
 import 'package:flutter_application_1/firebase_auth_implementair.dart';
 import 'package:flutter_application_1/reusable_widget/reusable.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+//import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_application_1/toast.dart';
