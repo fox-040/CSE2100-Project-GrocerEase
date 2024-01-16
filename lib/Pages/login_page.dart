@@ -69,8 +69,7 @@ class _LoginPageState extends State<LoginPage> {
                 height: 20,
               ),
               logInsignUpButton(context, true, () {
-                //Navigator.push(context,
-                //MaterialPageRoute(builder: (context) => HomePage()));
+                _signIn();
               }),
               signUpOption()
             ],
@@ -84,7 +83,6 @@ class _LoginPageState extends State<LoginPage> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("Dont have  account?", style: TextStyle(color: Colors.white70)),
         const Text("Don't have an account?",
             style: TextStyle(color: Colors.black)),
         GestureDetector(
