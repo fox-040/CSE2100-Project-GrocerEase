@@ -54,7 +54,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
           children: [
             Expanded(
                 child: ListView.builder(
-                    itemCount: 20,
+                    itemCount: productImage.length,
                     itemBuilder: (context, index) {
                       return Card(
                         child: Column(
@@ -64,8 +64,8 @@ class _ProductListScreenState extends State<ProductListScreen> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Image(
-                                  height: 7,
-                                  width: 7,
+                                  height: 100,
+                                  width: 100,
                                   image: NetworkImage(
                                       productImage[index].toString()),
                                 ),
