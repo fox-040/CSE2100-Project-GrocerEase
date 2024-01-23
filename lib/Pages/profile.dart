@@ -78,23 +78,18 @@ class _ProfileState extends State<Profile> {
                     )
                   ]),
             ),
-             Center(
-      child: ElevatedButton(
-        child: Text("Logout"
-        
-        ),
-        onPressed: () {
-          Navigator.push(context,
-             MaterialPageRoute(builder: (context)=>LoginPage()));
-        },
-      ),
-    )
+            Center(
+              child: ElevatedButton(
+                child: Text("Logout"),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => LoginPage()));
+                },
+              ),
+            )
           ],
         ),
       ),
-      
     );
-
-    
   }
 }
