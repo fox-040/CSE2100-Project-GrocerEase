@@ -5,6 +5,7 @@ import 'package:flutter_application_1/Pages/home_page.dart';
 import 'package:flutter_application_1/Pages/login_page.dart';
 
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_application_1/Pages/profile.dart';
 
 import 'dart:io';
 
@@ -33,7 +34,7 @@ void main() async {
       routes: {
         "/": (context) => const SplashScreen(),
         // '/': (context) => const ProductListScreen(),
-        "/home": (context) => const ProductListScreen(),
+        "/home": (context) => const Profile(),
       },
     ),
   );
