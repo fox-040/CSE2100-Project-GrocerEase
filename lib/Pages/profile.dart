@@ -49,7 +49,7 @@ Container(
     const Text(
 
       "Edit Profile",
-      style: TextStyle(fontSize:25.0),
+      style: TextStyle(fontSize:20.0),
     ),
     Icon(
       Icons.arrow_forward,
@@ -69,7 +69,7 @@ Container(
     const Text(
 
       "Profile Information",
-      style: TextStyle(fontSize:25.0),
+      style: TextStyle(fontSize:20.0),
     ),
     Icon(
       Icons.arrow_forward,
@@ -89,7 +89,8 @@ Container(
     const Text(
 
       "Log Out",
-      style: TextStyle(fontSize:20.0),
+      
+      style: TextStyle(fontSize:20.0,color: Colors.redAccent),
     ),
    
   ]),
