@@ -99,38 +99,17 @@ class _ProfileState extends State<Profile> {
                     )*/
                   ]),
             ),
-             Container(
-              padding: const EdgeInsets.all(20.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50.0),
-                color: Colors.black12,
-              ),
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    ElevatedButton(
-                      onPressed: () {
-                        
-                         Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => LoginPage()));
-                      },
-                      child: const Text(
-                        "Log Out",
-                        style: TextStyle(fontSize: 30.0),
-                      ),
-                      
-                    ),
-                  
-                    /*Icon(
-                      Icons.arrow_forward,
-                      size: 20,
-                    ),
-                    */
-                    
-                  ]),
-            ),
+             Center(
+      child: ElevatedButton(
+        child: Text("Logout"
+        
+        ),
+        onPressed: () {
+          Navigator.push(context,
+             MaterialPageRoute(builder: (context)=>LoginPage()));
+        },
+      ),
+    )
           ],
         ),
       ),
