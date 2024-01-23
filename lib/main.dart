@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Pages/catalog_page1.dart';
 import 'package:flutter_application_1/Pages/catalog_page1_2.dart';
+import 'package:flutter_application_1/Pages/edit_profile.dart';
 import 'package:flutter_application_1/Pages/home_page.dart';
 import 'package:flutter_application_1/Pages/login_page.dart';
 
@@ -34,7 +35,7 @@ void main() async {
       routes: {
         "/": (context) => const SplashScreen(),
         // '/': (context) => const ProductListScreen(),
-        "/home": (context) => const Profile(),
+        "/home": (context) => const editProfile(),
       },
     ),
   );

@@ -1,7 +1,9 @@
-import 'package:firebase_auth/firebase_auth.dart';
+//import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Pages/edit_profile.dart';
 import 'package:flutter_application_1/Pages/login_page.dart';
-import 'package:flutter_application_1/flutter/examples/layers/widgets/spinning_mixed.dart';
+//import 'package:flutter_application_1/flutter/examples/layers/widgets/spinning_mixed.dart';
+//import 'package:flutter_application_1/flutter/packages/flutter/test/material/icon_button_test.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -15,7 +17,7 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.blueGrey,
         title: const Text("My Profile",
             style: TextStyle(
               color: Colors.black,
@@ -36,65 +38,102 @@ class _ProfileState extends State<Profile> {
               height: 15,
             ),
             const Text(
-              "Rock",
+              " ",
               textAlign: TextAlign.center,
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0),
             ),
             Container(
-              padding: const EdgeInsets.all(40.0),
+              padding: const EdgeInsets.all(20.0),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
+                borderRadius: BorderRadius.circular(50.0),
                 color: Colors.black12,
               ),
               child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    const Text(
-                      "Edit Profile",
-                      style: TextStyle(fontSize: 20.0),
+                    ElevatedButton(
+                      onPressed: () {
+                        
+                         Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => editProfile()));
+                      },
+                      child: const Text(
+                        "Edit Profile",
+                        style: TextStyle(fontSize: 30.0),
+                      ),
                     ),
-                    Icon(
+                    /*Icon(
                       Icons.arrow_forward,
                       size: 20,
-                    )
+                    ),
+                    */
+                    
                   ]),
             ),
             Container(
-              padding: const EdgeInsets.all(40.0),
+              padding: const EdgeInsets.all(20.0),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
+                borderRadius: BorderRadius.circular(50.0),
                 color: Colors.black12,
               ),
               child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    const Text(
-                      "Profile Information",
-                      style: TextStyle(fontSize: 20.0),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LoginPage()));
+                      },
+                      child: const Text(
+                        "Profile Information",
+                        style: TextStyle(fontSize: 30.0),
+                      ),
                     ),
-                    Icon(
+                   /* Icon(
                       Icons.arrow_forward,
                       size: 20,
-                    )
+                    )*/
                   ]),
             ),
-             Center(
-      child: ElevatedButton(
-        child: Text("Logout"
-        
-        ),
-        onPressed: () {
-          Navigator.push(context,
-             MaterialPageRoute(builder: (context)=>LoginPage()));
-        },
-      ),
-    )
+             Container(
+              padding: const EdgeInsets.all(20.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50.0),
+                color: Colors.black12,
+              ),
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        
+                         Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LoginPage()));
+                      },
+                      child: const Text(
+                        "Log Out",
+                        style: TextStyle(fontSize: 30.0),
+                      ),
+                      
+                    ),
+                  
+                    /*Icon(
+                      Icons.arrow_forward,
+                      size: 20,
+                    ),
+                    */
+                    
+                  ]),
+            ),
           ],
         ),
       ),
-      
     );
-
-    
   }
 }
