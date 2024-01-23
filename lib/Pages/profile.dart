@@ -1,7 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Pages/login_page.dart';
-import 'package:flutter_application_1/flutter/examples/layers/widgets/spinning_mixed.dart';
+import 'package:flutter_application_1/Pages/screen.dart';
+//import 'package:flutter_application_1/flutter/examples/layers/widgets/spinning_mixed.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -86,6 +87,16 @@ class _ProfileState extends State<Profile> {
                       MaterialPageRoute(builder: (context) => LoginPage()));
                 },
               ),
+            ),
+            Container(
+              child: ElevatedButton(
+                child: Text("Chat"),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomeScreen()));
+                },
+              ),
+              //child: ElevatedButton,
             )
           ],
         ),
