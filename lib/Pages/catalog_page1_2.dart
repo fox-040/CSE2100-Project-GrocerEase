@@ -16,7 +16,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
     'Banana',
     'Cherry',
     'Peach',
-    //'Mixed Fruit Basket',
+    'Mixed Fruit Basket',
   ];
   List<String> productUnit = [
     'KG',
@@ -25,7 +25,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
     'Dozen',
     'KG',
     'KG',
-    //'KG',
+    'KG',
   ];
   List<int> productPrice = [
     10,
@@ -34,7 +34,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
     40,
     50,
     60,
-    //70,
+    70,
   ];
   List<String> productImage = [
     'https://www.shutterstock.com/image-photo/ripe-mango-isolated-on-white-clipping-1297537549',

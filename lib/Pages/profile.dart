@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Pages/edit_profile.dart';
 import 'package:flutter_application_1/Pages/login_page.dart';
-import 'package:flutter_application_1/flutter/examples/layers/widgets/spinning_mixed.dart';
+//import 'package:flutter_application_1/flutter/examples/layers/widgets/spinning_mixed.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});

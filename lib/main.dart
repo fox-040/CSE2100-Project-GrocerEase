@@ -33,8 +33,8 @@ void main() async {
         brightness: Brightness.dark,
       ),
       routes: {
-        "/": (context) => const SplashScreen(),
-        // '/': (context) => const ProductListScreen(),
+        //"/": (context) => const SplashScreen(),
+        '/': (context) => const ProductListScreen(),
         "/home": (context) => const editProfile(),
       },
     ),
