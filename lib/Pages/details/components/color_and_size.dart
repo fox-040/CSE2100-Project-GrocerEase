@@ -16,18 +16,18 @@ class ColorAndSize extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text("Color"),
+              Text("Available"),
               Row(
                 children: <Widget>[
                   ColorDot(
-                    color: Color(0xFF356C95),
+                    color: Colors.white,
                     isSelected: true,
                   ),
                   ColorDot(
-                    color: Color(0xFFF8C078),
+                    color: Colors.white,
                     isSelected: true,
                   ),
-                  ColorDot(color: Color(0xFFA29B9B), isSelected: false),
+                  ColorDot(color: Colors.white, isSelected: false),
                 ],
               ),
             ],
@@ -36,7 +36,7 @@ class ColorAndSize extends StatelessWidget {
         Expanded(
           child: RichText(
             text: TextSpan(
-              style: TextStyle(color: Colors.red),
+              style: TextStyle(color: Colors.blue),
               children: [
                 TextSpan(text: "Size\n"),
                 TextSpan(
