@@ -104,7 +104,8 @@ class _ProfileState extends State<Profile> {
                       MaterialPageRoute(builder: (context) => LoginPage()));
                 },
               ),
-            )
+            ),
+            
           ],
         ),
       ),

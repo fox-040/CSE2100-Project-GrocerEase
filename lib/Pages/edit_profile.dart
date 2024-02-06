@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Pages/home_page.dart';
 import 'package:flutter_application_1/Pages/profile.dart';
 import 'package:flutter_application_1/firebase_auth_implementation/firebase_auth_services.dart';
 //import 'package:flutter_application_1/flutter/packages/flutter/test/widgets/scroll_activity_test.dart';
@@ -73,6 +74,16 @@ class _editProfileState extends State<editProfile> {
                   
                   
             ),
+            Container(
+               child: ElevatedButton(
+                child: Text("chat"),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) =>HomePage()));
+                },
+              ),
+
+            )
             
             
             
