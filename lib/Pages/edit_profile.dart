@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Pages/home_page.dart';
 import 'package:flutter_application_1/Pages/profile.dart';
 import 'package:flutter_application_1/firebase_auth_implementation/firebase_auth_services.dart';
+import 'package:flutter_application_1/flutter/examples/api/lib/material/page_transitions_theme/page_transitions_theme.0.dart';
 //import 'package:flutter_application_1/flutter/packages/flutter/test/widgets/scroll_activity_test.dart';
 import 'package:flutter_application_1/reusable_widget/reusable.dart';
 

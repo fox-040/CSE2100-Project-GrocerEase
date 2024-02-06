@@ -15,10 +15,11 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: SafeArea(
+          
             child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: const [
-        const SizedBox(height: 48),
+         SizedBox(height: 48),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24.0),
           child: Text("Good Morning."),
@@ -46,11 +47,18 @@ class HomeScreen extends StatelessWidget {
                padding:  EdgeInsetsDirectional.symmetric(horizontal: 24.0),
               child: Text("Fresh Items",style: TextStyle(fontSize: 16),),
             ),
-
+            
+     
              
       ],
+      
     )
-    )
+    ),
+    bottomNavigationBar: BottomNavigationBar(
+      items: const[
+        BottomNavigationBarItem(icon: Icon(Icons.home),label:'Home', ),
+      ],
+      )
     );
 
     /*
