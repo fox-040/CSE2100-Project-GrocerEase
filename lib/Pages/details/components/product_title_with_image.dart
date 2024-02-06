@@ -17,14 +17,14 @@ class ProductTitleWithImage extends StatelessWidget {
         children: <Widget>[
           Text(
             "New addition",
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.black),
           ),
           Text(
             product.title,
             style: Theme.of(context)
                 .textTheme
                 .titleLarge!
-                .copyWith(color: Colors.white, fontWeight: FontWeight.bold),
+                .copyWith(color: Colors.green, fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 20),
           Row(
@@ -34,12 +34,12 @@ class ProductTitleWithImage extends StatelessWidget {
                   children: [
                     TextSpan(text: "Price\n"),
                     TextSpan(
-                      text: "৳{product.price}",
+                      text: "\$${product.price}",
                       style: Theme.of(context)
                           .textTheme
                           .headlineSmall!
                           .copyWith(
-                              color: Colors.white, fontWeight: FontWeight.bold),
+                              color: Colors.black, fontWeight: FontWeight.bold),
                     ),
                   ],
                 ),
