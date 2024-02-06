@@ -28,6 +28,7 @@ class AddToCart extends StatelessWidget {
             child: IconButton(
               icon: SvgPicture.asset(
                 "lib/assets/icons/add_to_cart.svg",
+                color: Colors.black,
                 colorFilter: ColorFilter.mode(product.color, BlendMode.srcIn),
               ),
               onPressed: () {},
@@ -46,7 +47,7 @@ class AddToCart extends StatelessWidget {
                 "Buy Now".toUpperCase(),
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
             ),
