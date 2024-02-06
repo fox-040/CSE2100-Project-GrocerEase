@@ -33,9 +33,10 @@ void main() async {
         brightness: Brightness.dark,
       ),
       routes: {
+        //"/": (context) => HomeScreen(),
         "/": (context) => const SplashScreen(),
         // '/': (context) => const ProductListScreen(),
-        "/home": (context) => const Profile(),
+        "/home": (context) => const editProfile(),
       },
     ),
   );
