@@ -43,7 +43,7 @@ class AddToCart extends StatelessWidget {
                 backgroundColor: product.color,
               ),
               child: Text(
-                "Buy  Now".toUpperCase(),
+                "Buy Now".toUpperCase(),
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
