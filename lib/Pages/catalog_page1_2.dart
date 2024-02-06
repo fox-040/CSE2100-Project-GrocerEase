@@ -1,4 +1,4 @@
-import 'package:badges/badges.dart';
+/*import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 
 class ProductListScreen extends StatefulWidget {
@@ -123,4 +123,4 @@ class _ProductListScreenState extends State<ProductListScreen> {
           ],
         ));
   }
-}
+}*/

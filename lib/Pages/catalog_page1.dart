@@ -1,4 +1,4 @@
-import 'package:badges/badges.dart';
+/*import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Pages/user_selection.dart';
 
@@ -30,4 +30,4 @@ class Catalog extends StatelessWidget {
       ],
     ));
   }
-}
+}*/
