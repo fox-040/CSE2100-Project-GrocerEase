@@ -1,4 +1,4 @@
-/*import 'dart:js';
+import 'dart:js';
 
 //import 'dart:js';
 
@@ -21,9 +21,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
+        /* leading: IconButton(
             onPressed: () => Navigator.pop(context),
-            icon: const Icon(LineAwesomeIcons.angle_left)),
+            icon: const Icon(LineAwesomeIcons.angle_left)),*/
         title: Padding(
           padding: const EdgeInsets.only(left: 70),
           child: Text(
@@ -45,7 +45,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     height: 120,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(100),
-                      child: Image.asset(AppAssets.profileImg),
+                      child: Image.network(
+                          "https://www.rawpixel.com/image/9074468/png-black-technology"),
                     ),
                   ),
                   Positioned(
@@ -56,12 +57,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       height: 35,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
-                          color: AppColor.whiteColor),
-                      child: const Icon(
+                          color: Color(7)),
+                      /* child: const Icon(
                         LineAwesomeIcons.alternate_pencil,
                         color: Colors.black,
                         size: 20,
-                      ),
+                      ),*/
                     ),
                   ),
                 ],
@@ -79,7 +80,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   onPressed: () =>
                       Navigator.pushNamed(context, '/updateProfile'),
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: AppColor.whiteColor,
+                      backgroundColor: Color(15),
                       side: BorderSide.none,
                       shape: const StadiumBorder()),
                   child: const Text('Edit Profile',
@@ -97,7 +98,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: ElevatedButton(
                   onPressed: () => Navigator.pushNamed(context, '/profileInfo'),
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: AppColor.whiteColor,
+                      backgroundColor: Color(15),
                       side: BorderSide.none,
                       shape: const StadiumBorder()),
                   child: const Text('Profile Imformation',
@@ -115,7 +116,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     logout();
                   },
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: AppColor.whiteColor,
+                      backgroundColor: Color(15),
                       side: BorderSide.none,
                       shape: const StadiumBorder()),
                   child: const Text('LOG OUT',
@@ -153,5 +154,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
     );
   }
-*/
-  
+
+  void logout() {}
+}
+
+mixin whiteColor {}
+
+class LineAwesomeIcons {
+  static IconData? angle_left;
+}
+
+class AppColor {}
