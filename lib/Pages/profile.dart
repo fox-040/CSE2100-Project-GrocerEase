@@ -1,4 +1,5 @@
 //import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Pages/edit_profile.dart';
 import 'package:flutter_application_1/Pages/login_page.dart';
@@ -100,6 +101,16 @@ class _ProfileState extends State<Profile> {
               child: ElevatedButton(
                 child: Text("Logout"),
                 onPressed: () {
+                  logout() async {
+                    try {
+                      await FirebaseAuth.instance.signOut();
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, '/login_page', (route) => false);
+                    } catch (e) {
+                      print(e);
+                    }
+                  }
+
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => LoginPage()));
                 },
